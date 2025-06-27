@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Theme On Nav</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><span class="logo">
+          <ion-icon name="code-slash-outline"></ion-icon>CodeByBhumika
+        </span></li>
+        <div class="list">
+          <li class="menu"><ion-icon name="home"></ion-icon><p>Home</p></li>
+          <li class="menu"><ion-icon name="body"></ion-icon><p>About</p></li>
+          <li class="menu"><ion-icon name="person-circle"></ion-icon><p>Contact</p></li>
+          <li class="menu"><ion-icon name="bag-add"></ion-icon><p>Admission</p></li>
+          <li class="menu"><ion-icon name="book"></ion-icon><p>Courses</p></li>
+        </div>
+        <li class="icon">
+          <ion-icon name="reorder-three-outline"></ion-icon>
+          <div class="dropdown">
+            <ul>
+              <li onclick="changeTheme('default')">Default</li>
+              <li onclick="changeTheme('light')">Light</li>
+              <li onclick="changeTheme('dark')">Dark</li>
+              <li onclick="changeTheme('green')">Green</li>
+              <li onclick="changeTheme('blue')">Blue</li>
+              <li onclick="changeTheme('orange')">Orange</li>
+              <li onclick="changeTheme('maroon')">Maroon</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      function changeTheme(theme) {
+        const root = document.documentElement;
+
+        const themes = {
+          default: {
+            "--color15": "#db8dd0", // body background
+            "--color16": "#fec5f6", // nav background
+            "--color13": "#b33791", // text color
+            "--color14": "#c562af"  // hover
+          },
+          light: {
+            "--color15": "#ffffff",
+            "--color16": "#f0f0f0",
+            "--color13": "#333333",
+            "--color14": "#cccccc"
+          },
+          dark: {
+            "--color15": "#2c2c2c",
+            "--color16": "#444444",
+            "--color13": "#ffffff",
+            "--color14": "#666666"
+          },
+          green: {
+            "--color15": "#b6f500",
+            "--color16": "#a4dd00",
+            "--color13": "#005500",
+            "--color14": "#98cd00"
+          },
+          blue: {
+            "--color15": "#91c8e4",
+            "--color16": "#749bc2",
+            "--color13": "#0d3b66",
+            "--color14": "#4682a9"
+          },
+          orange: {
+            "--color15": "#fb9e3a",
+            "--color16": "#e6521f",
+            "--color13": "#ffffff",
+            "--color14": "#ea2f14"
+          },
+          maroon: {
+            "--color15": "#ff9587",
+            "--color16": "#ba487f",
+            "--color13": "#fff0f0",
+            "--color14": "#722323"
+          }
+        };
+
+        const selected = themes[theme];
+        if (selected) {
+          Object.entries(selected).forEach(([key, value]) => {
+            root.style.setProperty(key, value);
+          });
+        }
+      }
+    </script>
+    
+  </body>
+</html>
