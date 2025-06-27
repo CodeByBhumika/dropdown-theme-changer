@@ -2,7 +2,7 @@
 
 This project is a responsive navigation bar with a dynamic color theme selector built using **HTML, CSS, and JavaScript**. Users can switch between multiple color themes using a dropdown menu, with smooth transitions and real-time visual updates.
 
-Website :-
+Website Link :- https://codebybhumika.github.io/dropdown-theme-changer/
 
 ---
 
@@ -14,18 +14,6 @@ Website :-
 - ⚡ Instant theme switch without page reload
 - 🔧 Clean, modular code structure
 - 📱 Responsive layout
-
----
-
-## 📂 Project Structure
-
-color-theme-navbar/
-│
-├── index.html # Main HTML structure
-├── style.css # CSS with root variables
-├── script.js (optional) # JS for theme switching (inline in HTML for now)
-└── README.md # Project documentation
-
 
 ---
 
